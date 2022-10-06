@@ -1,0 +1,27 @@
+Auto start main program
+
+    View hidden files press Ctrl + H
+    Open file /rootfs/home/odroid/.bashrc
+    Open the file with your favorite editor and add to the end this and save.
+    
+target
+
+    python3 IIOT1-GENERAL/main.py
+    
+    or
+    
+    python3 IIOT2-A/main.py
+    
+    or
+    
+    python3 IIOT3-B/main.py    
+    
+    or
+    
+    python3 IIOT4-B/main.py
+    
+    or
+    
+    python3 IIOT5-C/main.py 
+           
+Reboot your system.    
