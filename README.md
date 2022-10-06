@@ -1,2 +1,0 @@
-# Lanited_IoT
-LANITED IoT PCB CELL
