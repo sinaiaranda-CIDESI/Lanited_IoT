@@ -37,8 +37,8 @@ client.on_disconnect = on_disconnect
 client.on_message = on_message
 
 client.username_pw_set(username=mqttUserName, password=mqttPassword)
-client.tls_set(ca_certs="/root/TLSTools/ca.crt", certfile="/root/TLSTools/client01.crt",
-                    keyfile="/root/TLSTools/client01.key", cert_reqs=ssl.CERT_NONE,
+client.tls_set(ca_certs="/home/odroid/Lanited_IoT/TLSTools/ca.crt", certfile="/home/odroid/Lanited_IoT/TLSTools/client01.crt",
+                    keyfile="/home/odroid/Lanited_IoT/TLSTools/client01.key", cert_reqs=ssl.CERT_NONE,
                     tls_version=ssl.PROTOCOL_TLSv1_2, ciphers=None)
 client.tls_insecure_set(True)
 print("Connecting...")
@@ -77,9 +77,9 @@ print()
 print("System temperatures (°C) reported by the 'sensors' command (Ctrl-C to stop):")
 try:
     while True:
-        data = get_sensor_data()
-        temp_values = parse_temps(data)
-        update_output(temp_values)
+        #data = get_sensor_data()
+        #temp_values = parse_temps(data)
+        update_output("0")
         client.loop_stop(force=True)
         client.reconnect()
         client.loop_start()
