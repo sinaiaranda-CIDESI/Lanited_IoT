@@ -1,3 +1,5 @@
+ip addr show
+
 sudo apt-get update
 sudo apt-get upgrade
 
