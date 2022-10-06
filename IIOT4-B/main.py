@@ -13,7 +13,7 @@ import ssl
 from itsybitsy_module.read_serial import*
 from schneider_module.medidor_de_energia_v3 import*
 
-with open('Lanited_IoT/topics.txt') as f:
+with open('IIOT4-B/topics.txt') as f:
     topics = f.readlines()
 
 for topic in topics:
@@ -46,8 +46,8 @@ client.on_disconnect = on_disconnect
 client.on_message = on_message
 
 client.username_pw_set(username=mqttUserName, password=mqttPassword)
-client.tls_set(ca_certs="/home/odroid/Lanited_IoT/TLSTools/ca.crt", certfile="/home/odroid/Lanited_IoT/TLSTools/client01.crt",
-                    keyfile="/home/odroid/Lanited_IoT/TLSTools/client01.key", cert_reqs=ssl.CERT_NONE,
+client.tls_set(ca_certs="/home/odroid/IIOT4-B/TLSTools/ca.crt", certfile="/home/odroid/IIOT4-B/TLSTools/client01.crt",
+                    keyfile="/home/odroid/IIOT4-B/TLSTools/client01.key", cert_reqs=ssl.CERT_NONE,
                     tls_version=ssl.PROTOCOL_TLSv1_2, ciphers=None)
 client.tls_insecure_set(True)
 print("Connecting...")

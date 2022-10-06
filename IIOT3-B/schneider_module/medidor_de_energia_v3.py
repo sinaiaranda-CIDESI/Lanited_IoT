@@ -40,7 +40,7 @@ def read_energy_monitor():
         total_reactive_power_t = str(datetime.now().isoformat())
         total_apparent_power = round(instrument.read_float(0x0C03,3,2,0),2)
         total_apparent_power_t = str(datetime.now().isoformat())
-        power_factor = round(instrument.read_float(0x0C0B,3,2,0)*0.5,2)
+        power_factor= round(instrument.read_float(0x0C0B,3,2,0)-0.08,2)
         power_factor_t = str(datetime.now().isoformat())
         frequency = round(instrument.read_float(0x0C25,3,2,0),2)
         frequency_t = str(datetime.now().isoformat())
